@@ -58,9 +58,12 @@
 
                 <div class="bg-gray-900 rounded-md p-4">
                     <code class="text-sm text-gray-100 font-mono">
-                        helm template my-release onechart/onechart \<br>
-                        &nbsp;&nbsp;--set image.repository=nginx \<br>
-                        &nbsp;&nbsp;--set image.tag=1.19.3
+                        helm upgrade -i coffee onechart/onechart \<br>
+                        &nbsp;&nbsp;--set image.repository=lalyos/12factor \<br>
+                        &nbsp;&nbsp;--set image.tag=v2.0 \<br>
+                        &nbsp;&nbsp;--set ingress.host=coffee.k3z.eu \<br>
+                        &nbsp;&nbsp;--set vars.TITLE=Coffetime \<br>
+                        &nbsp;&nbsp;--set vars.COLOR2=orange
                     </code>
                 </div>
             </div>
