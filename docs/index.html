@@ -1,6 +1,100 @@
-<h1>One chart to rule them all.</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OneChart - Helm Chart Repository</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        @supports (font-variation-settings: normal) {
+            body {
+                font-family: 'Inter var', sans-serif;
+            }
+        }
+    </style>
+</head>
+<body class="bg-white dark:bg-gray-900">
+    <div class="min-h-screen">
+        <!-- Logo -->
+        <div class="text-center pt-12 sm:pt-16">
+            <img src="https://generator.onechart.dev/logo.svg" alt="OneChart" class="h-10 sm:h-16 inline" />
+        </div>
 
-<p>A generic Helm chart for your application deployments. <br />Because no-one can remember the Kubernetes yaml syntax.</p>
+        <!-- Main Content -->
+        <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+            <header class="text-center mt-8 mb-12">
+                <h1 class="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-slate-50 mb-4">
+                    One chart to rule them all
+                </h1>
+                <p class="text-xl text-gray-600 dark:text-slate-300">
+                    A generic Helm chart for your application deployments.<br>
+                    Because no one can remember the Kubernetes yaml syntax.
+                </p>
+            </header>
 
-<a href="index.yaml">index.yaml</a><br/>
-<a href="https://github.com/gimlet-io/gimlet-documentation/blob/main/src/pages/docs/reference/onechart-reference.md">Docs</a>
+            <!-- Getting Started Section -->
+            <div class="bg-gray-50 dark:bg-gray-800 rounded-lg p-8 mb-8">
+                <h2 class="text-2xl font-semibold text-gray-900 dark:text-slate-50 mb-4">
+                    Getting Started
+                </h2>
+
+                <p class="text-gray-700 dark:text-slate-300 mb-4">
+                    Add the OneChart Helm repository:
+                </p>
+
+                <div class="bg-gray-900 rounded-md p-4 mb-6">
+                    <code class="text-sm text-gray-100 font-mono">
+                        helm repo add onechart https://chart.onechart.dev
+                    </code>
+                </div>
+
+                <p class="text-gray-700 dark:text-slate-300 mb-4">
+                    Deploy your application:
+                </p>
+
+                <div class="bg-gray-900 rounded-md p-4">
+                    <code class="text-sm text-gray-100 font-mono">
+                        helm template my-release onechart/onechart \<br>
+                        &nbsp;&nbsp;--set image.repository=nginx \<br>
+                        &nbsp;&nbsp;--set image.tag=1.19.3
+                    </code>
+                </div>
+            </div>
+
+            <!-- Links Section -->
+            <div class="grid sm:grid-cols-2 gap-6 mb-16">
+                <a href="https://generator.onechart.dev/"
+                   class="block p-8 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-lg hover:from-indigo-600 hover:to-purple-700 transition-all shadow-lg hover:shadow-xl transform hover:scale-105">
+                    <h3 class="text-2xl font-bold text-white mb-3">
+                        YAML Generator →
+                    </h3>
+                    <p class="text-indigo-100 text-base">
+                        Interactive UI to generate your Kubernetes manifests
+                    </p>
+                </a>
+
+                <a href="https://generator.onechart.dev/onechart-reference"
+                   class="block p-8 bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 rounded-lg hover:border-indigo-500 dark:hover:border-indigo-400 transition-colors shadow-md">
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-slate-50 mb-3">
+                        Reference Documentation
+                    </h3>
+                    <p class="text-gray-600 dark:text-slate-300 text-base">
+                        Complete reference for all configuration options
+                    </p>
+                </a>
+            </div>
+
+            <!-- Footer -->
+            <footer class="text-center text-sm text-gray-500 dark:text-slate-400 pb-8">
+                <p>
+                    Originally made by <a href="https://gimlet.io/" class="underline hover:text-gray-700 dark:hover:text-slate-200" target="_blank" rel="noreferrer">gimlet.io</a>
+                </p>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
